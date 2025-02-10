@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+
+ #                                                                "DAY 1 JavaScript INTERVIEW QUESTION "
+
+
+Q1.Difference between “ == “ and “ === “ operators.
+Ans. In JavaScript, == and === are both used for comparison, key difference are:
+
+# Loose Equality (==)
+- Checks only the values of the operands, ignoring their data types.
+- Performs type coercion if necessary, which means it tries to convert the operands to a common data type before making the comparison.
+
+# Strict Equality (===)
+- Checks both the values and the data types of the operands.
+- Does not perform type coercion, so the operands must be of the same data type to be considered equal.
+
+Examples are 
+
+console.log(5 == "5"); // Output: true (type coercion occurs)
+console.log(5 === "5"); // Output: false (data types are different)
+
+
+Q2.What are the differences between var, let and const?
+
+Ans.
+
+# Var
+- Scope: Function scope (the variable is accessible within the function it's declared in)
+- Hoisting: Hoisted to the top of the function (can be accessed before declaration)
+- Reassignment: Can be reassigned
+- Redeclaration: Can be redeclared
+
+# Let
+- Scope: Block scope (the variable is accessible within the block it's declared in)
+- Hoisting: Hoisted to the top of the block, but not initialized until declaration (cannot be accessed before declaration)
+- Reassignment: Can be reassigned
+- Redeclaration: Cannot be redeclared in the same scope
+
+# Const
+- Scope: Block scope (the variable is accessible within the block it's declared in)
+- Hoisting: Hoisted to the top of the block, but not initialized until declaration (cannot be accessed before declaration)
+- Reassignment: Cannot be reassigned
+- Redeclaration: Cannot be redeclared in the same scope
+
+Example are 
+
+// Var
+console.log(varVariable); // Output: undefined
+var varVariable = 10;
+console.log(varVariable); // Output: 10
+
+// Let
+console.log(letVariable); // Output: ReferenceError
+let letVariable = 10;
+console.log(letVariable); // Output: 10
+
+// Const
+console.log(constVariable); // Output: ReferenceError
+const constVariable = 10;
+console.log(constVariable); // Output: 10
+
+
+Q3.What is execution context.
+Ans. In JavaScript, an execution context is an environment in which the JavaScript code is executed. 
+It's a abstract concept that refers to the scope, variables, and functions that are currently being executed.
+In simple words, an execution context in JavaScript is like a "workspace" where the code is executed.
+
+Q4.What is creation phase and execution phase.
+Ans. 
+1. Creation Phase (Memory Allocation Phase)
+    Happens when a function or script is first run.
+    The JavaScript engine allocates memory for variables and functions before executing the actual code.
+
+2. Execution Phase (Code Execution Phase) 
+    The JavaScript engine executes the code line by line after memory allocation.
+    It assigns values to variables and executes function calls.
+
+Q5.What is hoisting?
+Ans. Hoisting is a JavaScript concept where variables and functions are moved to the top of their scope, 
+regardless of where they are actually declared.
+
+Here's a simple example:
+
+console.log(x); // Output: undefined
+var x = 10;
+
+In this example, even though x is declared after it's logged to the console, 
+it's still accessible because it's been "hoisted" to the top of its scope.
+
+
+Q6.Difference between undefined vs not defined vs NaN
+Ans.
+
+Undefined
+- A variable that has been declared but not assigned a value.
+- Indicates that a variable has no value or is not initialized.
+- Example: var x; console.log(x); // Output: undefined
+
+Not Defined
+- A variable that has not been declared.
+- Indicates that a variable does not exist or is not recognized.
+- Example: console.log(x); // Output: ReferenceError: x is not defined
+
+NaN (Not a Number)
+- A value that represents an invalid or unreliable numeric result.
+- Often occurs when attempting to perform mathematical operations on non-numeric values.
+- Example: console.log("hello" * 2); // Output: NaN
+
+Q7.How many operators do we have in JS ? 
+Ans. 
+
+1. Arithmetic Operators (5)
+    - + (addition)
+    - - (subtraction)
+    - * (multiplication)
+    - / (division)
+    - % (modulus)
+
+2. Assignment Operators (6)
+    - = (assignment)
+    - += (addition assignment)
+    - -= (subtraction assignment)
+    - *= (multiplication assignment)
+    - /= (division assignment)
+    - %= (modulus assignment)
+
+3. Comparison Operators (6)
+    - == (equal)
+    - != (not equal)
+    - === (strict equal)
+    - !== (strict not equal)
+    - > (greater than)
+    - < (less than)
+
+4. Logical Operators (3)
+    - && (logical and)
+    - || (logical or)
+    - ! (logical not)
+    5. Bitwise Operators (6)
+    - & (bitwise and)
+    - | (bitwise or)
+    - ^ (bitwise xor)
+    - ~ (bitwise not)
+    - << (left shift)
+    - >> (right shift)
+
+6. Unary Operators (3)
+    - + (unary plus)
+    - - (unary minus)
+    - delete (delete operator)
+
+7. Ternary Operator (1)
+    - ?: (ternary operator)
+
+Q8.Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript
+Ans. 
+
+#Local Scope
+Local scope refers to the variables and functions defined within a specific block of code, such as a function or a block statement. 
+Variables defined in local scope are only accessible within that block of code.
+
+#Block Scope
+Block scope is a type of local scope that is specific to a block statement, such as an if statement or a loop. 
+Variables defined in block scope are only accessible within that block statement.
+
+#Functional Scope
+Functional scope, also known as function scope, refers to the variables and functions defined within a function. 
+Variables defined in functional scope are only accessible within that function.
+
+#Scope Chain
+The scope chain is a mechanism that allows JavaScript to search for variables and functions in multiple scopes. 
+When a variable or function is referenced, JavaScript 
+
+    </pre>
+</body>
+</html>
+
+
+
+
+
